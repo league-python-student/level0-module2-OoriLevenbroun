@@ -13,7 +13,21 @@ def animals():
 
     # TODO 1. Ask the user which animal they want, then see and
     #  hear the animal they chose using one of the methods below.
-
+    num = simpledialog.askinteger(title='you will now see animals', prompt='how many animals do you want to see(you can chose between 0 and 5)')
+    for i in range(num):
+        anm = simpledialog.askstring( title='enter a animal that you want to see and hear', prompt='enter a animal, you can enter "exit" to stop the program')
+        if anm == 'cow':
+            moo()
+        elif anm == 'duck':
+            quack()
+        elif anm == 'dog':
+            woof()
+        elif anm == 'cat':
+            meow()
+        elif anm == 'llama':
+            llama_scream()
+        elif anm == 'exit':
+            exit(0)
     # TODO 2. Make it so that the user can keep entering new animals.
 
     # TODO 3. If the user enters 'exit', stop the program
